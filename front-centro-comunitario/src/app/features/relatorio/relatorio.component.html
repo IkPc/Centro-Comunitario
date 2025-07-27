@@ -1,0 +1,11 @@
+<mat-tab-group [(selectedIndex)]="activeTabIndex" (selectedIndexChange)="onTabChange($event)">
+  <mat-tab label="Ocupação">
+    <app-relatorio-ocupacao *ngIf="activeTabIndex === 0"></app-relatorio-ocupacao>
+  </mat-tab>
+  <mat-tab label="Média de Recursos">
+    <app-relatorio-media *ngIf="activeTabIndex === 1"></app-relatorio-media>
+  </mat-tab>
+  <mat-tab label="Histórico de Trocas">
+    <app-relatorio-historico *ngIf="activeTabIndex === 2"></app-relatorio-historico>
+  </mat-tab>
+</mat-tab-group>

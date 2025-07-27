@@ -1,0 +1,17 @@
+<h2>Centros com Ocupação Crítica</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Capacidade</th>
+      <th>Ocupação Atual</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let centro of centros">
+      <td>{{ centro.nome }}</td>
+      <td>{{ centro.ocupacaoMaxima }}</td>
+      <td>{{ centro.ocupacaoAtual }}</td>
+    </tr>
+  </tbody>
+</table>

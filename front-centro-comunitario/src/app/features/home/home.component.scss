@@ -1,0 +1,31 @@
+*{
+    display: grid;
+    justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.2em 1em;
+  background-color: #007bff;
+  margin: 0.2em 0;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in, background-color 0.35s ease-out, transform 0.05s ease-in, transform 0.2s ease-out;
+}
+h1, h2 {
+  text-align: center;
+  display: block;
+}
+
+ul {
+    display: block;
+  list-style: none;
+  padding: 0;
+}
+
+.btn:active {
+  background-color: #0056b3;
+  transform: scale(0.90);
+}

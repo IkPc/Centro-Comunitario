@@ -1,0 +1,49 @@
+<h2>Realizar Intercâmbio de Recursos</h2>
+
+<form [formGroup]="form" (ngSubmit)="enviar()">
+  <div>
+    <label for="origem">Centro de Origem:</label>
+    <select id="origem" formControlName="origemId" required>
+      <option value="">-- Selecione --</option>
+      <option *ngFor="let centro of centros" [value]="centro.id">
+        {{ centro.nome }} (Ocupação: {{ (centro.ocupacaoAtual / centro.capacidadeMaxima) | percent:'1.0-0' }})
+      </option>
+    </select>
+  </div>
+
+  <div>
+    <label for="destino">Centro de Destino:</label>
+    <select id="destino" formControlName="destinoId" required>
+      <option value="">-- Selecione --</option>
+      <option *ngFor="let centro of centros" [value]="centro.id">
+        {{ centro.nome }} (Ocupação: {{ (centro.ocupacaoAtual / centro.capacidadeMaxima) | percent:'1.0-0' }})
+      </option>
+    </select>
+  </div>
+
+  <fieldset formGroupName="recursosEnviados">
+    <legend>Recursos Enviados pelo Centro de Origem</legend>
+    <div *ngFor="let tipo of recursoTipos">
+      <label>{{ RECURSO_TIPO_LABELS[tipo] }}:</label>
+      <input type="number" min="0" formControlName="{{ tipo }}" />
+    </div>
+  </fieldset>
+
+  <fieldset formGroupName="recursosRecebidos">
+    <legend>Recursos Enviados pelo Centro de Destino</legend>
+    <div *ngFor="let tipo of recursoTipos">
+      <label>{{ RECURSO_TIPO_LABELS[tipo] }}:</label>
+      <input type="number" min="0" formControlName="{{ tipo }}" />
+    </div>
+  </fieldset>
+
+  <p>
+    Pontos enviados pelo centro origem: <b>{{ calcularPontos(form.value.recursosEnviados) }}</b><br />
+    Pontos enviados pelo centro destino: <b>{{ calcularPontos(form.value.recursosRecebidos) }}</b>
+  </p>
+
+  <div *ngIf="mensagemErro" style="color:red;">{{ mensagemErro }}</div>
+  <div *ngIf="mensagemSucesso" style="color:green;">{{ mensagemSucesso }}</div>
+
+  <button type="submit" [disabled]="!podeEnviar()">Realizar Intercâmbio</button>
+</form>

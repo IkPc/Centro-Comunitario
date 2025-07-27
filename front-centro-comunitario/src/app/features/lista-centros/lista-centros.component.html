@@ -1,0 +1,15 @@
+<h2>Centros Comunitários</h2>
+
+<div *ngFor="let centro of centros" class="centro-card">
+  <h3>{{ centro.nome }}</h3>
+  <p><strong>Endereço:</strong> {{ centro.endereco }}</p>
+  <p><strong>Capacidade:</strong> {{ centro.ocupacaoAtual }} / {{ centro.capacidadeMaxima }}</p>
+  <p><strong>Recursos:</strong></p>
+  <ul>
+    <li>Médicos: {{ centro.recursos.medicos }}</li>
+    <li>Voluntários: {{ centro.recursos.voluntarios }}</li>
+    <li>Kits Médicos: {{ centro.recursos.kitsMedicos }}</li>
+    <li>Veículos: {{ centro.recursos.veiculos }}</li>
+    <li>Cestas Básicas: {{ centro.recursos.cestasBasicas }}</li>
+  </ul>
+</div>

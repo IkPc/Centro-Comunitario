@@ -1,0 +1,6 @@
+<h2>Média de Recursos por Centro</h2>
+<ul>
+  <li *ngFor="let item of media">
+    {{ item.tipo }}: {{ item.valor | number:'1.1-2' }}
+  </li>
+</ul>

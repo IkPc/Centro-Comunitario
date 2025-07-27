@@ -1,0 +1,15 @@
+<h1>Página Inicial</h1>
+<div class="homepage">
+    <h2>Bem-vindo ao Centro Comunitário</h2>
+    <p>Explore nossos recursos e serviços.</p>
+    
+    <nav>
+        <ul>
+        <li><button (click)="navigateTo('/centros')" class="btn">Centros Comunitários</button></li>
+        <li><button (click)="navigateTo('/intercambios')" class="btn">Intercâmbios</button></li>
+        <li><button (click)="navigateTo('/relatorios')" class="btn">Relatórios</button></li>
+        </ul>
+    </nav>
+    
+    <router-outlet></router-outlet>
+</div>

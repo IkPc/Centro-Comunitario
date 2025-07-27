@@ -1,0 +1,34 @@
+<h2>Histórico de Intercâmbios</h2>
+
+<form (ngSubmit)="buscar()">
+  <label>ID do Centro:
+    <input [(ngModel)]="centroId" name="centroId" required />
+  </label>
+
+  <label>Data e Hora Início:
+    <input type="datetime-local" pattern="[A-Za-zÀ-ÿ\s]*" [(ngModel)]="dataInicio" name="dataInicio" required />
+  </label>
+
+  <button type="submit">Buscar</button>
+</form>
+
+<table *ngIf="historico.length > 0">
+  <thead>
+    <tr>
+      <th>Centro Origem</th>
+      <th>Centro Destino</th>
+      <th>Recurso Enviados</th>
+      <th>Recurso Recebidos</th>
+      <th>Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of historico" onload="organizarRecursos()">
+      <td>{{ item.centroOrigemId }}</td>
+      <td>{{ item.centroDestinoId }}</td>
+      <td>{{ item.recursosEnviados }}</td>
+      <td>{{ item.recursosRecebidos }}</td>
+      <td>{{ item.dataHora | date:'short' }}</td>
+    </tr>
+  </tbody>
+</table>
