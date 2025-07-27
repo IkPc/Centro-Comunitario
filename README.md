@@ -1,5 +1,5 @@
 # Centro Comunitário 🔗
-##Plataforma para facilitar trocas de recursos entre centros comunitários, promovendo eficiência e colaboração. 
+## Plataforma para facilitar trocas de recursos entre centros comunitários, promovendo eficiência e colaboração. 
 
 ## 🛠️ Tecnologias
 - **Back-end**: Java, Spring Boot, Maven
