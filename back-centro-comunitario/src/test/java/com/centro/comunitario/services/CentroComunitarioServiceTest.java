@@ -1,18 +1,14 @@
 package com.centro.comunitario.services;
 
 import com.centro.comunitario.model.CentroComunitario;
-import com.centro.comunitario.model.RecursoTipo;
 import com.centro.comunitario.repository.CentroComunitarioRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
