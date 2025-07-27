@@ -1,5 +1,10 @@
-# Projeto de centro comunitario com back utilizando java com maven e springboot, front end com angular e mongoDB
+# Centro Comunitário 🔗
+##Plataforma para facilitar trocas de recursos entre centros comunitários, promovendo eficiência e colaboração. 
 
+## 🛠️ Tecnologias
+- **Back-end**: Java, Spring Boot, Maven
+- **Front-end**: Angular
+- **Banco de dados**: MongoDB
 
 ## Principais funcionalidades:
 
@@ -26,3 +31,7 @@
 - Então use "mvn clean install" para buildar o target
 - Então starte o projeto no ícone de play
 - E o swagger deve estar no http://localhost:8080/swagger-ui/index.html
+
+## Testes
+- Primeiro "cd back-centro-comunitario";
+- Então use "mvn test" et voilá!
