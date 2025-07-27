@@ -1,0 +1,94 @@
+# ===============================
+# Node / Front-end
+# ===============================
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node modules and logs
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# Angular cache
+/.angular/cache
+
+# Sass cache
+.sass-cache/
+
+# Miscellaneous
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VS Code (front) - ignore all except some config files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# IDEs and Editors (general front)
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# ===============================
+# Java / Back-end
+# ===============================
+
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+
+# Exclude targets except in src/main and src/test
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Spring Tools Suite (STS)
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# IntelliJ IDEA
+.idea
+*.iws
+*.iml
+*.ipr
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# VS Code (back)
+.vscode/
+
+# Miscellaneous
+*.log
+application.properties
+application.yml
+.env
