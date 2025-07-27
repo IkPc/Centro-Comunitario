@@ -18,20 +18,18 @@ import java.util.stream.Collectors;
 @Service
 public class RelatorioService {
 
-    @Autowired
-    private CentroComunitarioRepository centroRepository;
+    @Autowired CentroComunitarioRepository centroRepository;
 
-    @Autowired
-    private IntercambioRepository intercambioRepository;
+    @Autowired IntercambioRepository intercambioRepository;
 
-    // 1. Retorna centros com ocupação acima de 90%
+    // Retorna centros com ocupação acima de 90%
     public List<CentroComunitario> centrosCriticos() {
         return centroRepository.findAll().stream()
                 .filter(CentroComunitario::isOcupacaoCritica)
                 .collect(Collectors.toList());
     }
 
-    // 2. Retorna média de recursos por tipo por centro
+    // Retorna média de recursos por tipo por centro
     public Map<RecursoTipo, Double> mediaRecursosPorCentro() {
         List<CentroComunitario> centros = centroRepository.findAll();
 
@@ -53,7 +51,7 @@ public class RelatorioService {
         return mediaPorTipo;
     }
 
-    // 3. Histórico de negociação filtrado
+    // Histórico de negociação filtrado
     public List<Intercambio> historicoPorCentroEPeriodo(String centroId, LocalDateTime dataInicio) {
         if (centroId == null || centroId.isEmpty()) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "CentroId é obrigatório.");
